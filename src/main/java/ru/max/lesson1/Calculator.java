@@ -18,7 +18,7 @@ public class Calculator {
         if (op.equals("+")) {
             System.out.println("Результат: " + (a + b));
         } else if (op.equals("-")) {
-            System.out.println("Результат: " + (a + b));
+            System.out.println("Результат: " + (a - b));
         } else if (op.equals("*")) {
             System.out.println("Результат: " + (a * b));
         } else if (op.equals("/")) {
