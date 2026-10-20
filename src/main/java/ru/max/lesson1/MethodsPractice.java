@@ -16,6 +16,12 @@ public class MethodsPractice {
         countFromTo(3, 7);
         System.out.println();
         System.out.println("Сумма от 1 до 5: " + sumTo(5));
+        System.out.println();
+        System.out.println("Результат сложения: " + calculator(10, 5, "+"));
+        System.out.println("Результат вычитания: " + calculator(10, 5, "-"));
+        System.out.println("Результат умножения: " + calculator(10, 5, "*"));
+        System.out.println("Результат деления: " + calculator(10, 2, "/"));
+        System.out.println("Деление на ноль: " + calculator(10, 0, "/"));
     }
 
     public static boolean isEven(int n) {
@@ -48,5 +54,26 @@ public class MethodsPractice {
             sum = sum + i;
         }
         return sum;
+    }
+
+    public static double calculator(double a, double b, String op) {
+        if (op.equals("+")) {
+            return a + b;
+        }
+        if (op.equals("-")) {
+            return a - b;
+        }
+        if (op.equals("*")) {
+            return a * b;
+        }
+        if (op.equals("/")) {
+            if (b == 0) {
+                System.out.println("На ноль делить нельзя");
+                return 0;
+            }
+            return a / b;
+        }
+        System.out.println("Неизвестная операция");
+        return 0;
     }
 }
