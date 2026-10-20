@@ -12,6 +12,10 @@ public class MethodsPractice {
         countTo(5);
         System.out.println();
         countTo(3);
+        System.out.println();
+        countFromTo(3, 7);
+        System.out.println();
+        System.out.println("Сумма от 1 до 5: " + sumTo(5));
     }
 
     public static boolean isEven(int n) {
@@ -30,5 +34,19 @@ public class MethodsPractice {
         for (int i = 1; i <= n; i++) {
             System.out.print(i + " ");
         }
+    }
+
+    public static void countFromTo(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            System.out.print(i + " ");
+        }
+    }
+
+    public static int sumTo(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        return sum;
     }
 }
